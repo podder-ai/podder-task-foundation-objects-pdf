@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "podder-task-foundation-objects-pdf"
+version = "0.1.0"
+description = "PDF object plugin for podder-task-foundation"
+authors = ["Takaaki Mizuno <takaaki.mizuno@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.7.1,<4.0.0"
+pikepdf = "^5.1.2"
+"pdfminer.six" = "^20220319"
+podder-task-foundation = {git = "git@github.com:podder-ai/podder-task-foundation.git"}
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+isort = "^5.10.1"
+yapf = "^0.32.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.plugins]
+[tool.poetry.plugins."podder_task_foundation.objects"]
+"podder-task-foundation-objects-pdf" = "podder_task_foundation_objects_pdf:get_class"
