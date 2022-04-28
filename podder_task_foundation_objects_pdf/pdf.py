@@ -16,14 +16,19 @@ class PDF(Object):
     default_extension = ".pdf"
 
     def __init__(self,
-                 data: Optional[Union[Path, pikepdf.Pdf]] = None,
-                 path: Optional[Path] = None,
+                 data: Optional[Union[Path, str, pikepdf.Pdf]] = None,
+                 path: Optional[Union[Path, str]] = None,
                  name: Optional[str] = None,
                  *args):
 
-        if isinstance(data, Path) and path:
+        if isinstance(data, str) and path is None:
+            path = Path(data)
+        elif isinstance(data, Path) and path is None:
             path = data
-            data = None
+
+        data = None
+        if isinstance(path, str):
+            path = Path(path)
 
         self._temporary_directory_object = tempfile.TemporaryDirectory(
             prefix=name)

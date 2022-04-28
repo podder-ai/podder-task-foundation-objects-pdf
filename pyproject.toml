@@ -6,14 +6,14 @@ authors = ["Takaaki Mizuno <takaaki.mizuno@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.7.1,<4.0.0"
-pikepdf = "^5.1.2"
-"pdfminer.six" = "^20220319"
-podder-task-foundation = {git = "git@github.com:podder-ai/podder-task-foundation.git"}
+pikepdf = ">=1.14.0"
+"pdfminer.six" = "^20200517"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 isort = "^5.10.1"
 yapf = "^0.32.0"
+podder-task-foundation = {git = "git@github.com:podder-ai/podder-task-foundation.git"}
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
