@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "podder-task-foundation-objects-pdf"
-version = "0.1.0"
+version = "0.1.1"
 description = "PDF object plugin for podder-task-foundation"
 authors = ["Takaaki Mizuno <takaaki.mizuno@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.7.1,<4.0.0"
 pikepdf = ">=1.14.0"
-"pdfminer.six" = "^20200517"
+"pdfminer.six" = ">=20200517"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
